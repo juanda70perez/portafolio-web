@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan David Pérez Sotelo · Backend .NET Developer</title>
+  <meta name="description" content="Portafolio de Juan David Pérez Sotelo — Ingeniero de Sistemas y Desarrollador Backend .NET con +3 años de experiencia." />
+  <meta property="og:title" content="Juan David Pérez Sotelo · Backend .NET Developer" />
+  <meta property="og:description" content="Ingeniero de Sistemas · +3 años en .NET, RESTful APIs, integraciones ERP, cloud y arquitectura por capas." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Animated background -->
+  <div class="bg-effects" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Custom cursor follower -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="nav-logo-bracket">&lt;</span>JD<span class="nav-logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#certifications">Certificaciones</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <a href="HojaDeVida_JuanDavidPerezSotelo.pdf" download class="nav-cta">
+        Descargar CV
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <p class="hero-hello reveal">
+        <span class="hello-line"></span> Hola, soy
+      </p>
+      <h1 class="hero-name reveal">
+        <span class="hero-name-text">Juan David</span>
+        <span class="hero-name-text hero-name-accent">Pérez Sotelo</span>
+      </h1>
+      <h2 class="hero-role reveal">
+        <span class="prompt">&gt;</span> <span id="typed"></span><span class="caret">|</span>
+      </h2>
+      <p class="hero-desc reveal">
+        Ingeniero de Sistemas con <strong>+3 años de experiencia</strong> construyendo servicios
+        RESTful en .NET, integrando sistemas legacy con tecnologías modernas y desplegando
+        soluciones empresariales que mueven el negocio. Apasionado por la calidad del código,
+        los patrones de diseño y la formación continua en IA y cloud.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">
+          Ver proyectos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Contactarme</a>
+      </div>
+
+      <div class="hero-socials reveal">
+        <a href="https://github.com/juanda70perez" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.05c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.28-1.67-1.28-1.67-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.22 8h4.56v14H.22V8Zm7.86 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 6.99V22h-4.56v-6.59c0-1.57-.03-3.59-2.19-3.59-2.19 0-2.52 1.71-2.52 3.47V22H8.08V8Z"/></svg>
+        </a>
+        <a href="mailto:juan-10david@hotmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Bajar">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h3 class="section-title reveal"><span class="section-num">01.</span> Sobre mí</h3>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Soy <strong>Ingeniero de Sistemas</strong> egresado de la <strong>Universidad EAFIT</strong>,
+            con más de tres años desarrollando soluciones backend en <strong>.NET (C#, .NET 3 / 6 / 8)</strong> y
+            modernizando sistemas legacy en <strong>Visual FoxPro 9</strong> dentro de un ERP contable.
+          </p>
+          <p>
+            Me especializo en el diseño e implementación de <strong>servicios RESTful</strong>,
+            <strong>integraciones empresariales</strong> (cooperativas, mutuales, corresponsales Efecty)
+            y <strong>arquitecturas por capas</strong> con workers en segundo plano e interop entre stacks.
+          </p>
+          <p>
+            En 2025–2026 me he enfocado en ampliar el perfil con <strong>IA Generativa y Agentes de IA</strong>
+            (Vanderbilt University) y <strong>ciberseguridad y pentesting</strong> (Universidad de los Andes).
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">años de experiencia</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="14">0</span>
+              <span class="stat-label">repositorios públicos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="9">0</span>
+              <span class="stat-label">certificaciones</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+              <span class="terminal-title">juan@dev: ~/about</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-prompt">$</span> whoami</p>
+              <p class="t-out">backend_developer --net=8 --years=3</p>
+              <p><span class="t-prompt">$</span> cat current_role.txt</p>
+              <p class="t-out">.NET / VFP Developer @ OPA SAS</p>
+              <p><span class="t-prompt">$</span> ls ./stack/</p>
+              <p class="t-out">csharp/  dotnet/  sql-server/  azure/  docker/  workers/</p>
+              <p><span class="t-prompt">$</span> echo $PASSION</p>
+              <p class="t-out">"clean code, design patterns, learning"</p>
+              <p><span class="t-prompt">$</span> <span class="t-blink">_</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee tech stack -->
+      <div class="marquee reveal">
+        <div class="marquee-track">
+          <!-- duplicated for infinite loop -->
+          <div class="marquee-group">
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" /><span>C#</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET" /><span>.NET</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core" /><span>ASP.NET</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><span>Python</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TS" /><span>TypeScript</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" /><span>JavaScript</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" /><span>Java</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" /><span>Angular</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /><span>React</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" /><span>SQL Server</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" /><span>Oracle</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /><span>PostgreSQL</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /><span>Docker</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" /><span>Azure</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP" /><span>GCP</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /><span>Git</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" /><span>Linux</span></div>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="" /><span>C#</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt="" /><span>.NET</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt="" /><span>ASP.NET</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" /><span>Python</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" /><span>TypeScript</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" /><span>JavaScript</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" /><span>Java</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="" /><span>Angular</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" /><span>React</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="" /><span>SQL Server</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="" /><span>Oracle</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" /><span>PostgreSQL</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" /><span>Docker</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="" /><span>Azure</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="" /><span>GCP</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" /><span>Git</span></div>
+            <div class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="" /><span>Linux</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h3 class="section-title reveal"><span class="section-num">02.</span> Experiencia</h3>
+      <div class="timeline">
+        <article class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <header>
+              <h4>.NET / Visual FoxPro Developer</h4>
+              <span class="tl-company">OPA SAS</span>
+              <span class="tl-date">Julio 2023 – Actualidad</span>
+            </header>
+            <ul>
+              <li>Desarrollo de servicios RESTful en .NET (3, 6, 8) que extienden el ERP contable de la compañía según las necesidades específicas de cada cliente.</li>
+              <li>Diseñé e implementé la integración con los corresponsales Efecty de una cooperativa mediante API RESTful y un worker en segundo plano que asienta automáticamente los movimientos contables.</li>
+              <li>Construí la integración con una mutual usando WorkManager y interop para comunicar Visual FoxPro 9 con APIs en .NET, automatizando el envío de comprobantes de pago.</li>
+              <li>Despliegue y administración de servicios web en IIS (bindings, certificados, pools).</li>
+              <li>Atención directa al cliente y levantamiento de requerimientos.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>C#</span><span>.NET 8</span><span>RESTful</span><span>Workers</span><span>IIS</span><span>VFP 9</span><span>SQL Server</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <header>
+              <h4>Software Developer Intern</h4>
+              <span class="tl-company">ISAGEN S.A. E.S.P.</span>
+              <span class="tl-date">Julio 2022 – Enero 2023</span>
+            </header>
+            <ul>
+              <li>Desarrollo de una aplicación de escritorio en WinForms (.NET) para visualización y análisis de indicadores empresariales clave.</li>
+              <li>Levantamiento de requerimientos funcionales y no funcionales con stakeholders internos.</li>
+              <li>Diseño y construcción de indicadores estratégicos para toma de decisiones gerenciales.</li>
+              <li>Presentación de resultados ante el equipo de trabajo y áreas usuarias.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>.NET</span><span>WinForms</span><span>SQL</span><span>BI</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h3 class="section-title reveal"><span class="section-num">03.</span> Habilidades</h3>
+      <div class="skills-grid">
+        <div class="skill-card tilt reveal">
+          <div class="skill-icon">{ }</div>
+          <h4>Lenguajes</h4>
+          <ul><li>C#</li><li>Python</li><li>JavaScript / TypeScript</li><li>Java</li><li>PHP</li><li>SQL</li><li>Visual FoxPro</li></ul>
+        </div>
+        <div class="skill-card tilt reveal">
+          <div class="skill-icon">⚙</div>
+          <h4>Backend / .NET</h4>
+          <ul><li>.NET 3 / 6 / 8</li><li>ASP.NET Core · Web API</li><li>WinForms</li><li>Workers · WorkManager</li><li>Interop VFP ↔ .NET</li></ul>
+        </div>
+        <div class="skill-card tilt reveal">
+          <div class="skill-icon">▲</div>
+          <h4>Frontend</h4>
+          <ul><li>Angular</li><li>React</li><li>HTML5 / CSS3</li><li>TypeScript</li></ul>
+        </div>
+        <div class="skill-card tilt reveal">
+          <div class="skill-icon">⛁</div>
+          <h4>Bases de datos</h4>
+          <ul><li>SQL Server</li><li>Oracle</li><li>PostgreSQL</li></ul>
+        </div>
+        <div class="skill-card tilt reveal">
+          <div class="skill-icon">☁</div>
+          <h4>Cloud & DevOps</h4>
+          <ul><li>Azure</li><li>Google Cloud Platform</li><li>IBM Cloud</li><li>Docker · IIS · Git</li></ul>
+        </div>
+        <div class="skill-card tilt reveal">
+          <div class="skill-icon">✦</div>
+          <h4>IA & Seguridad</h4>
+          <ul><li>Agentes de IA</li><li>IA Generativa (Python)</li><li>Pruebas de penetración</li><li>Ciberseguridad</li></ul>
+        </div>
+        <div class="skill-card tilt reveal">
+          <div class="skill-icon">◫</div>
+          <h4>Arquitectura</h4>
+          <ul><li>Servicios RESTful</li><li>Arquitectura por capas</li><li>Patrones de diseño</li><li>Principios SOLID</li></ul>
+        </div>
+        <div class="skill-card tilt reveal">
+          <div class="skill-icon">⚐</div>
+          <h4>Metodologías & Idiomas</h4>
+          <ul><li>Scrum · Ágiles</li><li>Trabajo en equipo · Liderazgo</li><li>Español (nativo)</li><li>Inglés (B1)</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <h3 class="section-title reveal"><span class="section-num">04.</span> Certificaciones</h3>
+      <div class="cert-grid">
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/details/certifications/" target="_blank" rel="noopener" class="cert reveal">
+          <span class="cert-date">Abr 2026</span>
+          <h4>AI Agents and Agentic AI with Python &amp; Generative AI</h4>
+          <span class="cert-issuer">Vanderbilt University</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/details/certifications/" target="_blank" rel="noopener" class="cert reveal">
+          <span class="cert-date">Mar 2026</span>
+          <h4>Introduction to Software Engineering</h4>
+          <span class="cert-issuer">IBM</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/details/certifications/" target="_blank" rel="noopener" class="cert reveal">
+          <span class="cert-date">Nov 2025</span>
+          <h4>Vulnerabilidades y Pruebas de Penetración</h4>
+          <span class="cert-issuer">Universidad de los Andes</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/details/certifications/" target="_blank" rel="noopener" class="cert reveal">
+          <span class="cert-date">Jun 2025</span>
+          <h4>Advanced C# Programming in .NET Core</h4>
+          <span class="cert-issuer">EDUCBA</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/details/certifications/" target="_blank" rel="noopener" class="cert reveal">
+          <span class="cert-date">Oct 2024</span>
+          <h4>Patrones de Diseño en C#</h4>
+          <span class="cert-issuer">Udemy</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/details/certifications/" target="_blank" rel="noopener" class="cert reveal">
+          <span class="cert-date">Ago 2024</span>
+          <h4>Backend Development using ASP.NET</h4>
+          <span class="cert-issuer">Board Infinity</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/details/certifications/" target="_blank" rel="noopener" class="cert reveal">
+          <span class="cert-date">2024</span>
+          <h4>C# for .NET Developers</h4>
+          <span class="cert-issuer">Coursera</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/details/certifications/" target="_blank" rel="noopener" class="cert reveal">
+          <span class="cert-date">2024</span>
+          <h4>Google Cloud Big Data &amp; ML Fundamentals</h4>
+          <span class="cert-issuer">Google Cloud</span>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/details/certifications/" target="_blank" rel="noopener" class="cert reveal">
+          <span class="cert-date">2024</span>
+          <h4>Principios y Regulaciones de Seguridad de la Información</h4>
+          <span class="cert-issuer">Coursera</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h3 class="section-title reveal"><span class="section-num">05.</span> Proyectos</h3>
+      <p class="section-subtitle reveal">Selección de repositorios públicos donde demuestro dominio multi-stack.</p>
+      <div class="proj-grid">
+        <a class="proj tilt reveal" href="https://github.com/juanda70perez/ArquitecturaCapasBaseDeDatosFirst" target="_blank" rel="noopener">
+          <div class="proj-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+            <svg class="proj-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </div>
+          <h4>Arquitectura por capas — DB First</h4>
+          <p>Arquitectura por capas .NET Database-First sobre SQL Server con patrones de diseño y separación de responsabilidades.</p>
+          <div class="proj-tags"><span>C#</span><span>.NET</span><span>SQL Server</span></div>
+        </a>
+        <a class="proj tilt reveal" href="https://github.com/juanda70perez/PruebaTecnicaSanvicenteCes" target="_blank" rel="noopener">
+          <div class="proj-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <svg class="proj-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </div>
+          <h4>Prueba Técnica · San Vicente CES</h4>
+          <p>Backend en C# / .NET para el sector salud con servicios y capa de persistencia.</p>
+          <div class="proj-tags"><span>C#</span><span>.NET</span><span>Salud</span></div>
+        </a>
+        <a class="proj tilt reveal" href="https://github.com/juanda70perez/prueba_tecnica" target="_blank" rel="noopener">
+          <div class="proj-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17V7l8 5 8-5v10"/></svg>
+            <svg class="proj-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </div>
+          <h4>Full-stack · .NET Core + React</h4>
+          <p>API en .NET Core consumida por cliente React. Demostración de integración full-stack moderna.</p>
+          <div class="proj-tags"><span>.NET Core</span><span>React</span><span>REST</span></div>
+        </a>
+        <a class="proj tilt reveal" href="https://github.com/juanda70perez/front-end-prueba-tecnica-angular" target="_blank" rel="noopener">
+          <div class="proj-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 6 8-4 8 4-2 12-6 4-6-4Z"/></svg>
+            <svg class="proj-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </div>
+          <h4>Frontend Angular · Sinergia</h4>
+          <p>Frontend en Angular para prueba técnica full-stack. Componentes, servicios y consumo de APIs.</p>
+          <div class="proj-tags"><span>Angular</span><span>TypeScript</span></div>
+        </a>
+        <a class="proj tilt reveal" href="https://github.com/juanda70perez/PruebaTecnica" target="_blank" rel="noopener">
+          <div class="proj-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v18M18 3v18M3 12h18"/></svg>
+            <svg class="proj-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </div>
+          <h4>Backend Java · Sinergia</h4>
+          <p>Prueba técnica backend en Java. Demuestra versatilidad multi-lenguaje fuera del stack .NET.</p>
+          <div class="proj-tags"><span>Java</span><span>Backend</span></div>
+        </a>
+        <a class="proj tilt reveal" href="https://github.com/juanda70perez/firplak-app" target="_blank" rel="noopener">
+          <div class="proj-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <svg class="proj-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </div>
+          <h4>Firplak App · PHP</h4>
+          <p>Prueba técnica en PHP con enfoque web tradicional. Refleja capacidad de adaptación a stacks heredados.</p>
+          <div class="proj-tags"><span>PHP</span><span>Web</span></div>
+        </a>
+      </div>
+      <div class="proj-more reveal">
+        <a href="https://github.com/juanda70perez?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost">
+          Ver todos los repositorios
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-contact">
+    <div class="container container-narrow">
+      <h3 class="section-title reveal"><span class="section-num">06.</span> Contacto</h3>
+      <h2 class="contact-headline reveal">¿Construimos algo juntos?</h2>
+      <p class="contact-text reveal">
+        Estoy abierto a nuevas oportunidades, proyectos freelance o colaboraciones.
+        Escríbeme y respondo lo antes posible.
+      </p>
+      <div class="contact-actions reveal">
+        <a href="mailto:juan-10david@hotmail.com" class="btn btn-primary">
+          juan-10david@hotmail.com
+        </a>
+        <a href="HojaDeVida_JuanDavidPerezSotelo.pdf" download class="btn btn-ghost">
+          Descargar CV (PDF)
+        </a>
+      </div>
+      <div class="contact-socials reveal">
+        <a href="https://github.com/juanda70perez" target="_blank" rel="noopener">GitHub</a>
+        <span>·</span>
+        <a href="https://www.linkedin.com/in/juan-david-perez-sotelo-810ba2163/" target="_blank" rel="noopener">LinkedIn</a>
+        <span>·</span>
+        <a href="tel:+573053009296">+57 305 300 9296</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>
+      Diseñado y construido por <strong>Juan David Pérez Sotelo</strong>
+      · <a href="https://github.com/juanda70perez" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
