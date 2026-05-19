@@ -76,6 +76,128 @@ button { font: inherit; background: none; border: 0; color: inherit; cursor: poi
   -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
 }
 
+/* ---------- Floating .NET keywords, logos & game pixels ---------- */
+.floaters {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.float-item {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  animation: floatDrift var(--dur, 36s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  will-change: transform;
+  user-select: none;
+}
+.float-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 15px;
+  color: #64ffda;
+  opacity: 0.16;
+  text-shadow: 0 0 12px rgba(100,255,218,0.4);
+  letter-spacing: 0.5px;
+}
+.float-logo {
+  width: 44px; height: 44px;
+  opacity: 0.14;
+  filter: drop-shadow(0 0 14px rgba(122,162,255,0.35));
+}
+.float-pixel {
+  font-size: 26px;
+  opacity: 0.28;
+  text-shadow: 0 0 14px currentColor;
+}
+.float-game {
+  font-size: 30px;
+  opacity: 0.22;
+  filter: drop-shadow(0 0 10px rgba(122,162,255,0.4));
+}
+.float-spin {
+  font-size: 28px;
+  opacity: 0.32;
+  animation-name: spinPulse !important;
+  animation-timing-function: linear !important;
+  filter: drop-shadow(0 0 12px rgba(251,191,36,0.5));
+}
+
+/* ---------- Cross-screen flyers (rockets, cars, aliens) ---------- */
+.float-flyer {
+  position: absolute;
+  left: 0;
+  top: var(--y);
+  font-size: 34px;
+  opacity: 0.28;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 0 14px rgba(100,255,218,0.45));
+  animation-duration: var(--dur, 40s);
+  animation-delay: var(--delay, 0s);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: transform;
+}
+.float-flyer-l2r { animation-name: flyL2R; }
+.float-flyer-r2l { animation-name: flyR2L; }
+
+.float-bullet {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  color: #64ffda;
+  opacity: 0.55;
+  animation-name: bulletShot;
+  text-shadow: 0 0 12px #64ffda, 0 0 24px rgba(100,255,218,0.5);
+  letter-spacing: -2px;
+}
+
+@keyframes floatDrift {
+  0%,100% { transform: translate(0,0) rotate(0deg); }
+  25%     { transform: translate(40px, -28px) rotate(8deg); }
+  50%     { transform: translate(72px,  18px) rotate(-6deg); }
+  75%     { transform: translate(28px,  46px) rotate(10deg); }
+}
+
+@keyframes spinPulse {
+  0%   { transform: rotate(0deg)   scale(0.9); }
+  50%  { transform: rotate(180deg) scale(1.15); }
+  100% { transform: rotate(360deg) scale(0.9); }
+}
+
+@keyframes flyL2R {
+  0%   { transform: translateX(-8vw)  translateY(0)    rotate(-6deg); }
+  50%  { transform: translateX(50vw)  translateY(-25px) rotate(6deg); }
+  100% { transform: translateX(110vw) translateY(0)    rotate(-6deg); }
+}
+@keyframes flyR2L {
+  0%   { transform: translateX(110vw) translateY(0)    rotate(8deg)  scaleX(-1); }
+  50%  { transform: translateX(50vw)  translateY(20px) rotate(-4deg) scaleX(-1); }
+  100% { transform: translateX(-8vw)  translateY(0)    rotate(8deg)  scaleX(-1); }
+}
+@keyframes bulletShot {
+  0%   { transform: translateX(-5vw)  scaleX(1); opacity: 0; }
+  10%  { opacity: 0.7; }
+  90%  { opacity: 0.7; }
+  100% { transform: translateX(110vw) scaleX(2.5); opacity: 0; }
+}
+
+@media (max-width: 700px) {
+  .float-code   { font-size: 13px; opacity: 0.12; }
+  .float-logo   { width: 34px; height: 34px; opacity: 0.10; }
+  .float-pixel  { font-size: 22px; opacity: 0.22; }
+  .float-game   { font-size: 24px; opacity: 0.18; }
+  .float-spin   { font-size: 22px; opacity: 0.24; }
+  .float-flyer  { font-size: 26px; opacity: 0.22; }
+  .float-bullet { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-item, .float-flyer { animation: none; }
+  .float-flyer { display: none; }
+}
+
 /* Cursor follower */
 .cursor-glow {
   position: fixed; top: 0; left: 0;
